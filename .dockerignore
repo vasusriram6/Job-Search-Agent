@@ -1,0 +1,9 @@
+.venv
+API keys personal.txt
+__pycache__/
+.git
+.gitignore
+*.jpg
+.env
+Dockerfile*
+README.md
