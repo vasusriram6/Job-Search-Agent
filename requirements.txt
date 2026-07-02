@@ -4,12 +4,10 @@ langgraph
 langchain_community
 langchain_core
 langchain_groq
-langchain_openai
-faiss-cpu
 streamlit
-tavily-python
 langchain-google-genai
 langchain-mistralai
 langchain-huggingface
 huggingface_hub
-pypdf
+pypdf
+pytest
