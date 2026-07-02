@@ -44,5 +44,5 @@ docker run -p 8501:8501 noobmlengineer/job-search-agent-app:latest
 4.	Then in a web browser, open the website:
 ```bash
 localhost:8501
-```<
+```
 
