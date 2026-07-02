@@ -16,7 +16,6 @@ class GraphBuilder:
         """
         from src.state.job_state import JobState
         from src.nodes.job_analyzer_node import JobAnalyzerNode
-        from src.nodes.job_search_url_node import JobSearchUrlNode
         from src.nodes.job_retriever_node import JobRetrieverNode
         from src.nodes.job_matcher_node import JobMatcherNode
 
@@ -24,18 +23,15 @@ class GraphBuilder:
         self.job_graph_builder = StateGraph(JobState)
 
         analyzer = JobAnalyzerNode(self.llm)
-        search_url = JobSearchUrlNode()
         retriever = JobRetrieverNode()
         matcher = JobMatcherNode(self.llm)
 
         self.job_graph_builder.add_node("analyze_input", analyzer.process)
-        self.job_graph_builder.add_node("generate_search_url", search_url.process)
         self.job_graph_builder.add_node("fetch_jobs", retriever.process)
         self.job_graph_builder.add_node("match_jobs", matcher.process)
 
         self.job_graph_builder.add_edge(START, "analyze_input")
-        self.job_graph_builder.add_edge("analyze_input", "generate_search_url")
-        self.job_graph_builder.add_edge("generate_search_url", "fetch_jobs")
+        self.job_graph_builder.add_edge("analyze_input","fetch_jobs")
         self.job_graph_builder.add_edge("fetch_jobs", "match_jobs")
         self.job_graph_builder.add_edge("match_jobs", END)
 
