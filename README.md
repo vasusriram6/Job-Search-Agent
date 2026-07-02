@@ -29,6 +29,8 @@ streamlit run app.py
 ```
 This will open the app in a web browser.
 
+Note: When running the app with the above method, you can store any required API keys in the .env file. By doing so, you don't have to paste the API key again in the app page.
+
 ### Steps to run the app directly via Docker container:
 1.	Make sure Docker Desktop is installed and is running
 2.	Then in command prompt, type:
