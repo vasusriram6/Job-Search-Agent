@@ -11,7 +11,7 @@ def test_app_streamlit():
     # Root folder of this script's directory
     project_root = os.path.dirname(test_dir)
 
-    app_dir = os.path.join(project_root, "src")
+    app_dir = project_root
 
     # Add project root to sys.path
     if app_dir not in sys.path:
