@@ -33,7 +33,7 @@ jobs:
 
       # Step 4: Run tests
       - name: Run test
-        run: streamlit run app.py
+        run: pytest
 
   build-and-publish:
     needs: build-and-run
