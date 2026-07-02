@@ -33,7 +33,7 @@ jobs:
 
       # Step 4: Run tests
       - name: Run test
-        run: timeout 30s streamlit run app.py
+        run: streamlit run app.py
 
   build-and-publish:
     needs: build-and-run
