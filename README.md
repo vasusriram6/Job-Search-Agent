@@ -1,6 +1,6 @@
-### Job Search Agent Application
+## Job Search Agent Application
 
-The project is developed in Antigravity IDE, with CI/CD implementation using Github Actions and Docker.
+This is an agentic application built for fetching the closest matching jobs based on your resume and location choice
 
 ### Sample app screenshots:
 
